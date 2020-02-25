@@ -1,0 +1,4 @@
+[submodule "kubernetes"]
+	path = kubernetes
+	url = https://github.com/vhirewadeyar/kubernetes.git
+	branch = master
