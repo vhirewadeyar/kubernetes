@@ -11,7 +11,7 @@
     command: docker tag tomcat-web vhirewadeyar/tomcat-web
 
   - name: push image on to dockerhub
-    command: docker push vhirewadeyar/tomcat-web
+    command: sudo docker push vhirewadeyar/tomcat-web
 
   - name: remove docker images form ansible server
     command: docker rmi  tomcat-web:latest vhirewadeyar/tomcat-web
