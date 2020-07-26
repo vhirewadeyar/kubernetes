@@ -5,7 +5,7 @@
   - name: create docker image using war file
     command: docker build -t tomcat-web:latest .
     args:
-      chdir: /opt/k8s-lab
+      chdir: /opt/k8s
 
   - name: create tag to image
     command: docker tag tomcat-web vhirewadeyar/tomcat-web
