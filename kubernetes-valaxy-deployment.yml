@@ -1,8 +1,8 @@
 ---
 - name: Create pods using deployment 
-  hosts: kubernetes 
+  hosts: k8s-master 
   become: true
-  user: root
+  user: ansadmin
  
   tasks: 
   - name: create a deployment

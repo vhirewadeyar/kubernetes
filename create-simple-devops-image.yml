@@ -1,19 +1,19 @@
 ---
-- hosts: ansible-server
-  become: true
+- hosts: localhost
 
   tasks:
   - name: create docker image using war file
-    command: docker build -t simple-devops-image:latest .
+    command: docker build -t tomcat-web:latest .
     args:
       chdir: /opt/k8s-lab
 
   - name: create tag to image
-    command: docker tag simple-devops-image yankils/simple-devops-image
+    command: docker tag tomcat-web vhirewadeyar/tomcat-web
 
   - name: push image on to dockerhub
-    command: docker push yankils/simple-devops-image
+    command: docker push vhirewadeyar/tomcat-web
 
   - name: remove docker images form ansible server
-    command: docker rmi simple-devops-image:latest yankils/simple-devops-image
+    command: docker rmi  tomcat-web:latest vhirewadeyar/tomcat-web
     ignore_errors: yes
+
