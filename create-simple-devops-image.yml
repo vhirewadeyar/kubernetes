@@ -14,6 +14,6 @@
     command: sudo docker push vhirewadeyar/tomcat-web
 
   - name: remove docker images form ansible server
-    command: docker rmi  tomcat-web:latest vhirewadeyar/tomcat-web
+    command: sudo docker rmi  tomcat-web:latest vhirewadeyar/tomcat-web
     ignore_errors: yes
 
